@@ -1,0 +1,89 @@
+GT_df_path: null
+add_chm: 0
+add_exgi: 0
+add_input2: 0
+add_ndvi: 0
+add_output_names: null
+add_outputs: 0
+add_seg: 0
+augmentation_prob: 0.5
+batch_size: 32
+beta1: 0.5
+beta2: 0.999
+checkpoint_dir: ./checkpoints
+chm_pred: 0
+chm_resample: 0
+circle_crop: 0
+classification_label_fn: /mnt/super/greenhouse/validation/labels.csv
+conf_score: 0
+correction_score: 0
+croplength: 0
+dropoutchm: 0
+earlystop: 0
+expandGray: 0
+imageCallbackDir: ./visionCallbacks
+imageNetnorm: 1
+image_callback_freq: 20
+image_size: 0
+img_ch: 3
+input2_name: ''
+input_rescale: 1
+inputlength: 224
+keep_all_features: 0
+log_step: 2
+loss_func: BCE
+loss_func_addop: null
+loss_name: null
+lr: 0.005
+lr_decay_frequency: 30
+lr_decay_rate: 0.6
+meanstdnorm: 0
+mergeTrainValid: 1
+min_lr: 1.0e-05
+mode: train
+model_path: ./saved_models/gh/
+model_suf: null
+model_type: torchEfficientnetb2
+nnlevel: 4
+norm_wei: 0
+num_epochs: 100
+num_workers: 1
+onlyRGB: 1
+output_ch: 1
+patience: 50
+pretrained: 1
+refine_seg: 0
+result_path: ./result/
+rgb2gray: 0
+saveImages: 0
+score_name: null
+showmap: 0
+split_ratio: 0.8
+t: 3
+task: classification
+tensorboard:
+  log: false
+test_chm_path: null
+test_forestOnly: 1
+test_forestThres: 0.8
+test_path: /mnt/super/greenhouse/validation/
+test_seg_path: ''
+test_weight_name: null
+train_chm_path: null
+train_path: /mnt/super/greenhouse/validation/
+train_seg_path: ''
+use_color: 1
+val_step: 2
+valid_chm_path: null
+valid_path: /mnt/super/greenhouse/validation/
+valid_seg_path: ''
+wandb:
+  config:
+    model_name: ${model_type}
+  log: true
+  name: ${model_type}
+  project: greenhouse
+  public: true
+weightDecay: 0.1
+weight_forest_yesno: 1
+weight_name: null
