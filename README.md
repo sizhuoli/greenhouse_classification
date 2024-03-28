@@ -1,9 +1,9 @@
 
 # Greenhouse image classification
 
-This repo contains code on image classification for the paper [Global area boom for greenhouse cultivation revealed by satellite mapping](https://www.researchsquare.com/article/rs-3231996/v1 'link to paper')]
+This repo contains code on image classification for the paper [Global area boom for greenhouse cultivation revealed by satellite mapping](https://www.researchsquare.com/article/rs-3231996/v1 'link to paper')
 
-The purpose is to find the presence of greenhouses globally tile by tile (a region of approximately 1 degree cell). The tiles with a positive prediction of greenhouses will be served to the [image segmentation model (https://doi.org/10.5281/zenodo.3978185 'link to paper')]
+The purpose is to find the presence of greenhouses globally tile by tile (a region of approximately 1 degree cell). The tiles with a positive prediction of greenhouses will be served to the [image segmentation model](https://doi.org/10.5281/zenodo.3978185 'link to paper')
  
 ### Key features
 
