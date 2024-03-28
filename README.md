@@ -1,17 +1,17 @@
 
 # Greenhouse image classification
 
-This repo contains code for the paper [Global area boom for greenhouse cultivation revealed by satellite mapping](https://www.researchsquare.com/article/rs-3231996/v1 'link to paper')
+This repo contains code on image classification for the paper [Global area boom for greenhouse cultivation revealed by satellite mapping](https://www.researchsquare.com/article/rs-3231996/v1 'link to paper')
+
+The purpose is to find the presence of greenhouses globally tile by tile (a region of approximately 1 degree cell). The tiles with a positive prediction of greenhouses will be served to the image segmentation model (https://doi.org/10.5281/zenodo.3978185).
  
 ### Key features
 
-For the Danish dataset:
+- This code splits the image chip labels with the target 'greenhouse' and background 'non-greenhouse', which were saved as csv, into training, validation and testing data.
 
-- We offer image patches preprocessed in two ways: a. patch-normalization to 0 mean and unit std (used in paper); b. raw patches with orginial pixel intensities.
+- Train model using EfficientNet backbones
 
-- There are several empty patches with no crown delineations (used as negative sample for training), which can be removed 
-
-- Coordinates have been removed
+- Predict at 1km grid for a large area
 
 
 
@@ -39,7 +39,7 @@ python main_classification.py
 
 -------------------------------------------------------------------------------------------
 
-### Test 1st model: Predict at 1km grid for large image (e.g. PlanetScope):
+### Test 1st model: Predict at 1km grid for large area using satellite images (e.g. PlanetScope):
 
 ```
 python inference_run_classification.py
